@@ -1,0 +1,380 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100%;
+}
+
+.wrap {
+    max-width: 100%;
+}
+
+nav {
+    height: 10vh;
+    width: 100%;
+    background: #2a55cc;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    width: 50%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links li a:hover {
+    color: navy;
+}
+
+@media screen and (max-width: 768px) {
+    .line {
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        margin: 5px;
+    }
+
+    nav {
+        position: fixed;
+        z-index: 1;
+    }
+
+    .hamburger {
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+    }
+
+    .nav-links {
+        position: fixed;
+        background-color: rgb(255, 255, 255, 0.7);
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(100px at 90% -100px);
+        -webkit-clip-path: circle(100px at 90% -100px);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+
+    .nav-links li a {
+        color: white;
+        background-color: #2a55cc;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .nav-links li a:hover {
+        color: navy;
+    }
+
+    .nav-links.open {
+        clip-path: circle(1000px at 90% -50px);
+        -webkit-clip-path: circle(1000px at 90% -50px);
+        pointer-events: all;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .nav-links li a {
+        font-size: 25px;
+    }
+
+    .nav-links li:nth-child(1) {
+        transition: all 0.5 ease 0.2s;
+    }
+
+    .nav-links li:nth-child(2) {
+        transition: all 0.5 ease 0.4s;
+    }
+
+    .nav-links li:nth-child(3) {
+        transition: all 0.5 ease 0.6s;
+    }
+
+    li.fade {
+        opacity: 1;
+    }
+
+    .toggle .line:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .toggle .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .toggle .line:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+.home {
+    height: 100vh;
+    margin-top: 5vh;
+}
+
+.welcome {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding-top: 200px;
+    color: white;
+    background-image: url(../img/worldmap.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.about {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px hidden white;
+    height: auto;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    padding: 40px 0px;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow: -20px -20px 60px #bebebe,
+        20px 20px 60px #ffffff;
+}
+
+.about-img {
+    max-width: 55%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius:50px;
+}
+
+.about-img img {
+    max-width: 100%;
+    border-radius: 50px;
+}
+
+.about-text {
+    margin: 20px;
+    padding: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+}
+
+.track {
+    max-width: 55%;
+    height: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px;
+    margin-bottom: 80px;
+    border-radius: 50px;
+    box-shadow: -20px -20px 60px #bebebe,
+            20px 20px 60px #ffffff;
+    background: rgb(34, 59, 195);
+    background: linear-gradient(0deg, rgba(34, 59, 195, 1) 0%, rgba(45, 56, 253, 1) 100%);
+}
+
+.track form {
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.track form input{
+    height: 40px;
+    width: 90%;
+    border-radius: 20px;
+    border: none;
+    padding: 5px;
+    margin: 10px;
+}
+
+.track form button {
+    height: 30px;
+    width: 80px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: rgb(21, 21, 180);
+}
+
+.track form button:hover {
+    background-color: blue;
+    transition: 1s all ease;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow: -20px -20px 60px #bebebe,
+        20px 20px 60px #ffffff;
+}
+
+.mail {
+    width: 50%;
+    height: 100%;
+    padding-top: 40px;
+    padding-left: 10px;
+}
+
+.mail form {
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.mail form input {
+    height: 50px;
+    width: 240px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.mail form textarea {
+    margin: 10px;
+    padding: 10px;
+    min-width: 505px;
+    max-width: 505px;
+    min-height: 180px;
+    max-height: 180px;
+}
+
+.mail form button {
+    margin: 10px;
+    padding: 10px;
+    height: 35px;
+    width: 80px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: rgb(21, 21, 180);
+}
+
+.mail form button:hover {
+    background-color: blue;
+    transition: 1s all ease;
+}
+
+.mail ::placeholder {
+    font-size: 16px;
+}
+
+.address {
+    width: 50%;
+    min-height: 100%;
+    background: rgb(34, 59, 195);
+    background: linear-gradient(0deg, rgba(34, 59, 195, 1) 0%, rgba(45, 56, 253, 1) 100%);
+    color: white;
+    font-size: 24px;
+    border-radius: 0 50px 50px 0;
+    padding-top: 40px;
+    padding-left: 10px;
+}
+
+.address ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.address h3 {
+    margin-bottom: 60px;
+}
+
+.totop {
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    z-index: 3;
+    border: 1px hidden navy;
+}
+
+.totop i {
+    color: navy;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 40px;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+    background-color: navy;
+    color: white;
+    padding-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .track {
+        height: 200px;
+        width: 80%;
+    }
+    .track form {
+        margin-top: 40px;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+    }
+    .mail {
+        height: 50%;
+        width: 100%;
+    }
+    .mail form input {
+        height: 50px;
+        width: 90%;
+        margin: 10px;
+        padding: 10px;
+    }
+    .mail form textarea {
+        min-width: 90%;
+        max-width: 90%;
+    }
+    .address {
+        height: 50%;
+        width: 100%;
+        border-radius: 0 0 50px 50px;;
+    }
+}

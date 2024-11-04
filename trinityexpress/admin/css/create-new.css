@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+.wrap {
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: rgb(115, 118, 138);
+    background: linear-gradient(0deg, rgba(115, 118, 138, 1) 0%, rgba(200, 201, 213, 1) 100%);
+}
+
+form {
+    width: 90%;
+    height: auto;
+    overflow-y: scroll;
+    margin: 40px 0 60px 0;
+}
+
+input {
+    width: 95%;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    margin: 20px 0 20px 0;
+    padding: 10px;
+    font-size: 16px;
+}
+
+input::placeholder {
+    font-size: 16px;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    border-radius: 7px;
+    padding: 7px;
+    margin: 40px 0 0 0;
+    background-color: darkblue;
+    border: 0px hidden darkblue;
+    color: white;
+}
+
+button:hover {
+    background-color: blue;
+    transition: 1s all ease;
+}
